@@ -1,8 +1,10 @@
 import random
 from strike import *
 from Characters import *
+from music import *
 
-def Start():
+def Game():
+        play_music()
         name = input('Welcome to Star Jedi Fighters! Please enter a name: ')
         print('\nYour opponent will not be automatic\n\nChoose your character as P1\nsometimes a character may undergo aggeression and may\ncause mor damage than normal\n')
         Player1 = input('\n\nHere you can select a character for yourself\n\nKylo Ren 500\nDarth Malgus 550\nPlapertine 700\nRay Skywalker 500\nLuke Skywalker 650\nObi Van Kenobi 650\nYoda 1000\n')
