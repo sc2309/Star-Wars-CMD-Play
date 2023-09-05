@@ -27,7 +27,7 @@ features:
 	two fighters and none will be automatic
 
 to be added:
-    add new characters
+    add new characters    ~~ DONE ~~ 
     choke using force
     stun using force
     add star currency
