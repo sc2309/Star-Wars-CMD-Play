@@ -30,6 +30,7 @@ to be added:
     add new characters    ~~ DONE ~~ 
     choke using force
     stun using force
+	add maps
     add star currency
     add buy able items
     add a xlsx sheet to store username as well as star currency
