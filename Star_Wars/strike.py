@@ -1,7 +1,9 @@
 import sys
 from music import *
 
+
 def P1Strike(h,sh,shand,sb,sl,c,h2,sh2,shand2,sb2,sl2,c2):
+    moveCounter = 0
     print("Select your move P1 \nlightsaber strike on head(lsh)\nlightsaber strike on hand(lshand)\nlightsaber strike on leg(lsl)\nlightsaber strike on body(lsb)\nchoke opponents neck(c)\n")
     move = input()
     if move == 'lsh':
@@ -30,7 +32,8 @@ def P1Strike(h,sh,shand,sb,sl,c,h2,sh2,shand2,sb2,sl2,c2):
     P2Strike(h,sh,shand,sb,sl,c,h2,sh2,shand2,sb2,sl2,c2)
 
 def P2Strike(h,sh,shand,sb,sl,c,h2,sh2,shand2,sb2,sl2,c2):
-    print("Select your move P2\nlightsaber strike on head(lsh)\nlightsaber strike on hand(lshand)\nlightsaber strike on leg(lsl)\nlightsaber strike on body(lsb)\nchoke opponents neck(c)\n\n")
+    moveCounter = 0
+    print("Select your move P2\nlightsaber strike on head(lsh)\nlightsaber strike on hand(lshand)\nlightsaber strike on leg(lsl)\nlightsaber strike on body(lsb)\nchoke opponents neck(c)\n")
     move = input()
     if move == 'lsh':
         h = h - sh2

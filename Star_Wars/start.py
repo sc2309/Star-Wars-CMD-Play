@@ -1,12 +1,35 @@
 import random
+from Maps import *
 from strike import *
 from Characters import *
 from music import *
+import openpyxl
+
+def add_values_to_excel(file_path, sheet_name, values):
+    try:
+        try:
+            workbook = openpyxl.load_workbook(file_path)
+        except FileNotFoundError:
+            workbook = openpyxl.Workbook()
+
+        if sheet_name not in workbook.sheetnames:
+            workbook.create_sheet(sheet_name)
+
+        sheet = workbook[sheet_name]
+
+        for row in values:
+            sheet.append(row)
+
+        workbook.save(file_path)
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 def Game():
         play_music()
         name = input('Welcome to Star Jedi Fighters! Please enter a name: ')
-        print('\nYour opponent will not be automatic\n\nChoose your character as P1\nsometimes a character may undergo aggeression and may\ncause mor damage than normal\n')
+        Galactic_Credit = 0
+        map = str(input('Please select map from here:\nCoruscant\nMustafar\nStar Destroyer\nStar Ship\nNaboo\ntatooine\nKamino\nHoth\nExegol\nMandalore\n'))
         Player1 = input('\n\nHere you can select a character for yourself\n\nKylo Ren 500\nDarth Malgus 550\nPlapertine 700\nRay Skywalker 500\nLuke Skywalker 650\nObi Van Kenobi 650\nYoda 1000\nAnakin Skywalker or Darth Vader 700\nQui Gon Jinn 650\nDarth Maul 620\nDarth Revan 650\nCount Dooku 630\n')
         player2 = input('Let your opponent select his character as P2:\n\nKylo Ren 500\nDarth Malgus 550\nPlapertine 700\nRay Skywalker 500\nLuke Skywalker 650\nObi Van Kenobi 650\nYoda 1000\nAnakin Skywalker or Darth Vader 700\nQui Gon Jinn 650\nDarth Maul 620\nDarth Revan 650\nCount Dooku 630\n')
         if Player1 == 'Kylo Ren':
@@ -63,6 +86,36 @@ def Game():
         else:
             print('ERROR 1 : Not a character')
 
+ #       if map == 'Coruscant':
+ #           pass
+ #       elif map == 'Mustafar':
+ #           pass
+ #       elif map == 'Star Destroyer':
+ #           pass
+ #       elif map == 'Star Ship':
+ #           pass
+ #       elif map == 'Naboo':
+ #           pass
+ #       elif map == 'Tatooine':
+ #           pass
+ #       elif map == 'Kamino':
+ #           pass
+ #       elif map == 'Hoth':
+ #           pass
+ #       elif map == 'Exegol':
+ #           pass
+ #       elif map == 'Mandalore':
+ #           pass
+ #       else:
+ #           pass
+
+        excel_file_path = "example.xlsx"
+        sheet_name = "DataSheet"
+        new_values = [
+            ["Name","Money"],
+            [name,Galactic_Credit]
+        ]
+        add_values_to_excel(excel_file_path, sheet_name, new_values)
 
         x = random.randrange(1, 3)
         if x == 1:
