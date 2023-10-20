@@ -27,9 +27,6 @@ features:
 	two fighters and none will be automatic
 
 to be added:
-    add new characters                                                    ~~ DONE ~~
-    choke using force                                                     ~~ DONE ~~
-	add maps                                                              ~~ DONE ~~
 	add differemt music according to  the maps
 	add help
 	add a xlsx sheet to store username as well as star currency

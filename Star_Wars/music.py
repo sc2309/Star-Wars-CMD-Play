@@ -6,7 +6,7 @@ def play_music():
     # Initialize pygame
     pygame.init()
 
-    music_path = "TheRiseOfSkywalkerThemeEpicVersion1.mp3"
+    music_path = 'song.mp3' #"TheRiseOfSkywalkerThemeEpicVersion1.mp3"
 
     # Check if the music file exists
     if not os.path.exists(music_path):
